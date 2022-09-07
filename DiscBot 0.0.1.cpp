@@ -26,7 +26,7 @@ bot.on("presenceUpdate", (oldMember, newMember) => {
   let playRole = guild.roles.find("name", "Playing Overwatch");
   if(!playRole) return;
  
-  if(newMember.user.presence.game && newMember.user.presence.game.name === "Overwatch") {
+  if(newMember.user.presence.game && newMember.user.presence.game.name === "Fortnite") {
     newMember.addRole(playRole).catch(console.error);
   } else if(!newMember.user.presence.game && newMember.roles.has(playRole.id)) {
     newMember.removeRole(playRole).catch(console.error);
